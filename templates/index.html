@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Similarity Calculator</title>
+</head>
+<body>
+    <h1>Calculate Similarity</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="original">Enter Original Answer:</label><br>
+        <input type="text" id="original" name="original"><br><br>
+        
+        <label for="student">Upload Student's Answer (Image):</label><br>
+        <input type="file" id="student" name="student_image"><br><br>
+        
+        <input type="submit" value="Calculate Similarity">
+    </form>
+
+    {% if similarity %}
+        <h2>Similarity Score: {{ similarity|round(2) }}%</h2>
+    {% endif %}
+</body>
+</html>
